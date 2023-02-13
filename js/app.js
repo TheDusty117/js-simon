@@ -14,25 +14,36 @@ const yourFiveNums = populateYourNums()
 
 console.log(yourFiveNums)
 
+const correctNumsArr = []
+const wrongNumsArr = []
+
+for (let i = 0; i < 5; i++){
+  if (fiveRandomNums.includes(yourFiveNums[i])){
+    correctNumsArr.push(yourFiveNums[i])
+  } else {
+    wrongNumsArr.push(yourFiveNums[i])
+  }
+}
+
+console.log(correctNumsArr)
+console.log(wrongNumsArr)
+
 clearInterval(clock) //NB dico a const clock, di togliere l'interval dopo una sola attivazione, quindi si attivera' una sola volta
 }, 5000);
 
 //CONTROLLARE SE I 5 NUMERI PROMPT inseriti da utente SONO UGUALI AI 5 dell'ALERT
 
-// for (let i=0; i < 5; i++) {
-//   if (fiveRandomNums[i] === yourFiveNums[i]){
-//     console.log('hai indovinato')
-//   } else {
-//     console.log('nooooo')
-//   }
-// }
+
+
 
 //STAMPARE QUANTI NUMERI SONO STATI INSERITI CORRETTAMENTE
 
 
 
+//I NUMERI VENGONO TROVATI, MA DEVONO ESSERE INSERITI NELL'ORDINE CORRETTO ,ALTRIMENTI NON LI TROVA
 
-
+// compareArrs (fiveRandomNums,yourFiveNums)
+// console.log(fiveRandomNums, yourFiveNums)
 
 
 
@@ -66,9 +77,6 @@ clearInterval(clock) //NB dico a const clock, di togliere l'interval dopo una so
   }
 
 
-
-
-
 //popola l'array di 5 numeri inseriti dall'UTENTE tramite PROMPT
   function populateYourNums() {
     const yourFiveNums = []
@@ -82,5 +90,20 @@ clearInterval(clock) //NB dico a const clock, di togliere l'interval dopo una so
   }
 
 
+  
   //confronta indice per indici i DUE ARRAY POPOLATI POCO FA
 //CREA FUNZIONE CHE CONTROLLA GLI ELEMENTI DEI DUE ARRAY UNO AD UNO
+
+
+// function compareArrs (arr1,arr2){
+
+//   const objMap={};
+  
+// arr1.forEach((e1)=>arr2.forEach((e2)=> {if(e1 === e2){
+//        objMap[e1]=objMap[e1]+1||1 ;
+//     }
+//   }
+// ));
+// console.log(Object.keys(objMap).map(e=>Number(e)));
+// return console.log(`${Object.keys(objMap).map(e=>Number(e))}`)
+// }

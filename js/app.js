@@ -8,7 +8,7 @@ console.log(fiveRandomNums)
 //DOPO I 30 SECONDI UTENTE DEVE INSERIRE TRAMITE PROMPT GLI STESSI NUMERI RANDOM DELL'ALERT
 //INSERISCI UN TIMER DI 30 SECONDI PER FAR ACCADERE TUTTO CIO'
 
-const clock = setInterval(function () {
+const clock = setInterval(function () { //inizio intervallo
 
 const yourFiveNums = populateYourNums()
 
@@ -29,7 +29,7 @@ console.log(correctNumsArr)
 console.log(wrongNumsArr)
 
 clearInterval(clock) //NB dico a const clock, di togliere l'interval dopo una sola attivazione, quindi si attivera' una sola volta
-}, 5000);
+}, 5000);// fine intervallo secondi, (impostati 5 secondi per comodita')
 
 //CONTROLLARE SE I 5 NUMERI PROMPT inseriti da utente SONO UGUALI AI 5 dell'ALERT
 

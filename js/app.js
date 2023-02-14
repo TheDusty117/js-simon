@@ -4,6 +4,7 @@ const fiveRandomNums = populateFiveRandomNums()
 
 console.log(fiveRandomNums)
 
+let points = 0
 
 //DOPO I 30 SECONDI UTENTE DEVE INSERIRE TRAMITE PROMPT GLI STESSI NUMERI RANDOM DELL'ALERT
 //INSERISCI UN TIMER DI 30 SECONDI PER FAR ACCADERE TUTTO CIO'
@@ -14,19 +15,20 @@ const yourFiveNums = populateYourNums()
 
 console.log(yourFiveNums)
 
-const correctNumsArr = []
-const wrongNumsArr = []
+const correctNumsArr = [] //NUMERI VINCENTI
+const wrongNumsArr = []   //NUMERI PERDENTI
 
 for (let i = 0; i < 5; i++){
   if (fiveRandomNums.includes(yourFiveNums[i])){
     correctNumsArr.push(yourFiveNums[i])
+    points++
   } else {
     wrongNumsArr.push(yourFiveNums[i])
   }
 }
-
-console.log(correctNumsArr)
-console.log(wrongNumsArr)
+console.log(points)
+console.log('i numeri che hai indovinato', correctNumsArr)
+console.log('i numeri che NON hai indovinato',wrongNumsArr)
 
 clearInterval(clock) //NB dico a const clock, di togliere l'interval dopo una sola attivazione, quindi si attivera' una sola volta
 }, 5000);// fine intervallo secondi, (impostati 5 secondi per comodita')
